@@ -1,0 +1,107 @@
+[versions]
+# Common
+kotlin = "1.9.10"
+kotlinx_coroutines = "1.7.3"
+kotlinx_serialization_json = "1.6.0"
+
+koin = "3.5.0"
+
+# Android
+agp = "8.1.1"
+
+compose_compiler = "1.5.3"
+compose_ui = "1.5.1"
+
+androidx_workmanager = "2.8.1"
+
+androidx_navigation = "2.7.2"
+androidx_core_ktx = "1.12.0"
+androidx_appcompat = "1.6.1"
+android_material = "1.9.0"
+constraintlayout = "2.1.4"
+androidx-fragment-ktx = "1.6.1"
+lifecycle-livedata-ktx = "2.6.2"
+lifecycle-viewmodel-ktx = "2.6.2"
+
+compileSdk = "34"
+minSdk = "24"
+targetSdk = "34"
+
+# Web
+ktor = "2.3.4"
+mongodb_driver_kotlin = "4.10.2"
+logback = "1.4.11"
+
+micrometer_prometheus = "1.6.3"
+
+
+
+[libraries]
+# Common
+kotlinx_coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx_coroutines" }
+kotlinx_serialization_json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm", version.ref = "kotlinx_serialization_json" }
+koin = { module = "io.insert-koin:koin-core-jvm", version.ref = "koin" }
+
+# Android
+koin_android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+kotlinx_coroutines_android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx_coroutines" }
+
+androidx_core_ktx = { module = "androidx.core:core-ktx", version.ref = "androidx_core_ktx" }
+androidx_appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx_appcompat" }
+
+androidx_navigation_fragment_ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx_navigation" }
+androidx_navigation_ui_ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidx_navigation" }
+
+androidx_compose_ui = { module = "androidx.compose.ui:ui", version.ref = "compose_ui" }
+androidx_compose_ui_tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose_ui" }
+androidx_compose_material = { module = "androidx.compose.material:material", version.ref = "compose_ui" }
+
+androidx_workmanager = { module = "androidx.work:work-runtime-ktx", version.ref = "androidx_workmanager" }
+
+android_material = { module = "com.google.android.material:material", version.ref = "android_material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment-ktx" }
+
+ktor_client_core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor_client_cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor_client_contentnegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor_client_serialization_json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor_client_websockets = { module = "io.ktor:ktor-client-websockets", version.ref = "ktor" }
+
+# Web
+ktor_server_core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor_server_cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
+
+ktor_server_swagger = { module = "io.ktor:ktor-server-swagger-jvm", version.ref = "ktor" }
+ktor_server_openapi = { module = "io.ktor:ktor-server-openapi", version.ref = "ktor" }
+
+ktor_server_metrics_micrometer = { module = "io.ktor:ktor-server-metrics-micrometer-jvm", version.ref = "ktor" }
+
+ktor_server_contentnegotiation = { module = "io.ktor:ktor-server-content-negotiation-jvm", version.ref = "ktor" }
+ktor_server_serial_kotlinx = { module = "io.ktor:ktor-serialization-kotlinx-json-jvm", version.ref = "ktor" }
+
+ktor_server_websockets = { module = "io.ktor:ktor-server-websockets-jvm", version.ref = "ktor" }
+ktor_server_resources = { module = "io.ktor:ktor-server-resources", version.ref = "ktor" }
+ktor_server_auth = { module = "io.ktor:ktor-server-auth-jvm", version.ref = "ktor" }
+
+micrometer_prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer_prometheus" }
+
+mongodb_driver_kotlin = { module = "org.mongodb:mongodb-driver-kotlin-sync", version.ref = "mongodb_driver_kotlin" }
+
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+
+
+
+[plugins]
+# Common
+kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+# Android
+kotlin_android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android = { id = "com.android.application", version.ref = "agp" }
+
+# Web
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
